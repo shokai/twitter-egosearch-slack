@@ -25,5 +25,8 @@ module EgoSearch
       "@#{user} #{text} - #{time} #{url}"
     end
 
+    def self.exists?(status_id)
+      where(:status_id => status_id.to_s).count > 0
+    end
   end
 end

@@ -12,13 +12,15 @@ module EgoSearch
       Config.words.each do |word|
         @client.search(word).each do |tweet|
           emit :crawl, word, tweet
+          next if Tweet.exists? tweet.id
           tweet = Tweet.parse tweet
-          begin
-            tweet.save! unless @nosave
-          rescue Mongoid::Errors::Validations
-            next
-          rescue => e
-            emit :error, e
+          unless @nosave
+            begin
+              tweet.save!
+            rescue => e
+              emit :error, e
+              next
+            end
           end
           emit :new, word, tweet
         end
