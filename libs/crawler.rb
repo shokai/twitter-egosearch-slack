@@ -2,7 +2,8 @@ module EgoSearch
   class Crawler
     include EventEmitter
 
-    def initialize
+    def initialize(opts={})
+      @nosave = opts[:nosave]
       @client = ::Tw::Client.new
       @client.auth Config.twitter.user
     end
@@ -13,7 +14,7 @@ module EgoSearch
           emit :crawl, word, tweet
           tweet = Tweet.parse tweet
           begin
-            tweet.save!
+            tweet.save! unless @nosave
           rescue Mongoid::Errors::Validations
             next
           rescue => e

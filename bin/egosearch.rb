@@ -9,7 +9,17 @@ require "models/tweet"
 require "libs/crawler"
 require "libs/skype"
 
-crawler = EgoSearch::Crawler.new
+args = ArgsParser.parse ARGV do
+  arg :nosave, "nosave"
+  arg :help, "show help", :alias => :h
+end
+
+if args.has_option? :help
+  STDERR.puts args.help
+  exit 1
+end
+
+crawler = EgoSearch::Crawler.new :nosave => args.has_option?(:nosave)
 
 crawler.on :crawl do |word, tweet|
   puts "[crawl:#{word}] - #{tweet}"

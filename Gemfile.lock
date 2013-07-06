@@ -57,6 +57,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  args_parser
   bson_ext
   event_emitter
   mongoid
