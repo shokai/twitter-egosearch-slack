@@ -61,6 +61,7 @@ DEPENDENCIES
   args_parser
   bson_ext
   event_emitter
+  hashie
   hugeurl
   mongoid
   ruby-dbus
