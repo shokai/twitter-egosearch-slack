@@ -5,9 +5,9 @@ Bundler.require
 $:.unshift File.expand_path "../", File.dirname(__FILE__)
 require "inits/db"
 require "inits/config"
+require "models/tweet"
 require "libs/crawler"
 require "libs/skype"
-require "models/tweet"
 
 crawler = EgoSearch::Crawler.new
 
