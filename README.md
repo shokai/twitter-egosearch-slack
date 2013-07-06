@@ -1,6 +1,5 @@
 Twitter EgoSearch Skype
 =======================
-
 - search on Twitter
 - notify with Skype
 - https://github.com/shokai/twitter-egosearch-skype
