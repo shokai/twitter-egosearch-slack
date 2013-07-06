@@ -27,7 +27,7 @@ end
 
 crawler.on :new do |word, tweet|
   puts "[new:#{word}] - #{tweet}"
-  EgoSearch::Skype.post "(beer) #{word} (beer)\n#{tweet.text}\n#{tweet.time}\n#{tweet.url}"
+  EgoSearch::Skype.post "(beer) [#{word}] @#{tweet.user} (beer)\n#{tweet.text}\n#{tweet.time}\n#{tweet.url}"
 end
 
 crawler.on :error do |err|
