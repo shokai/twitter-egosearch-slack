@@ -1,0 +1,7 @@
+development:
+  sessions:
+    default:
+      database: twitter-egosearch
+      hosts:
+        - localhost:27017
+
