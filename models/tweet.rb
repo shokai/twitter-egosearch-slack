@@ -20,5 +20,10 @@ module EgoSearch
                :url => tweet.url
                )
     end
+
+    def to_s
+      "@#{user} #{text} - #{time} #{url}"
+    end
+
   end
 end

@@ -5,6 +5,7 @@ $:.unshift File.expand_path "../", File.dirname(__FILE__)
 require "inits/db"
 require "libs/config"
 require "libs/crawler"
+require "libs/skype"
 require "models/tweet"
 
 crawler = EgoSearch::Crawler.new
@@ -15,6 +16,7 @@ end
 
 crawler.on :new do |word, tweet|
   puts "[new:#{word}] - #{tweet}"
+  EgoSearch::Skype.post "(beer) #{word}\n#{tweet.text}\n#{tweet.time}\n#{tweet.url}"
 end
 
 crawler.on :error do |err|
