@@ -9,3 +9,24 @@ words:
   - "橋本商会"
   - "github.com/shokai"
   - "shokai.github"
+
+ignore:
+  users:
+    - bot
+    - shokai_twit
+    - shokai_bot
+    - shokai_log
+    - end_0606_shokai
+    - kirakira
+    - rurourafale
+    - YADAYOOOOOO
+    - aine0120
+    - K_T_Hotel_Annex
+    - sho1nco
+    - koyoshokai
+  words:
+    - shokai_bot
+    - shopping.yahoo
+    - キラキラ商会
+    - kirakira
+    - ビリケン
