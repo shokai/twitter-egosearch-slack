@@ -3,7 +3,7 @@ require "bundler"
 Bundler.require
 $:.unshift File.expand_path "../", File.dirname(__FILE__)
 require "inits/db"
-require "libs/config"
+require "inits/config"
 require "libs/crawler"
 require "libs/skype"
 require "models/tweet"
@@ -16,7 +16,7 @@ end
 
 crawler.on :new do |word, tweet|
   puts "[new:#{word}] - #{tweet}"
-  EgoSearch::Skype.post "(beer) #{word}\n#{tweet.text}\n#{tweet.time}\n#{tweet.url}"
+  EgoSearch::Skype.post "(beer) #{word} (beer)\n#{tweet.text}\n#{tweet.time}\n#{tweet.url}"
 end
 
 crawler.on :error do |err|
