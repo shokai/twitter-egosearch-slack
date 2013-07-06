@@ -12,10 +12,14 @@ module EgoSearch
 
     def self.parse(tweet)
       raise ArgumentError "instance of Tw::Tweet require" unless tweet.kind_of? Tw::Tweet
+      text = tweet.text.gsub(/https?:\/\/[^\s]+/){|s|
+        s = URI.parse(s).to_huge.to_s rescue
+        s
+      }
       self.new(
                :status_id => tweet.id.to_s,
                :user => tweet.user,
-               :text => tweet.text,
+               :text => text,
                :time => tweet.time,
                :url => tweet.url
                )
