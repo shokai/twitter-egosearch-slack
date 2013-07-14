@@ -1,6 +1,12 @@
 development:
   sessions:
     default:
+      database: twitter-egosearch-dev
+      hosts:
+        - localhost:27017
+production:
+  sessions:
+    default:
       database: twitter-egosearch
       hosts:
         - localhost:27017

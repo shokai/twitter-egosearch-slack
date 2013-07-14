@@ -42,4 +42,4 @@ get ID of Chat.
 Run
 ---
 
-    % bundle exec ruby bin/egosearch.rb
+    % MONGOID_ENV=production bundle exec ruby bin/egosearch.rb
