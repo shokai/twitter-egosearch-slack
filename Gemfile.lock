@@ -36,7 +36,7 @@ GEM
     skype (0.2.5)
       tmp_cache
     tmp_cache (0.1.1)
-    tw (0.4.3)
+    tw (0.4.4)
       args_parser (>= 0.1.4)
       json (>= 1.7.0)
       parallel (>= 0.6.0)
