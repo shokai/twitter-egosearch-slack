@@ -2,7 +2,8 @@ twitter:
   user: shokai
 
 skype:
-  chat: "#abcde/$efg_jklm;1ab2cd34e5f6789ghi"
+  topic: "your chat topic name"
+  # id: "#abcde/$efg_jklm;1ab2cd34e5f6789ghi"
 
 words: 
   - "shokai.org"
