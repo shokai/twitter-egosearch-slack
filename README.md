@@ -1,6 +1,6 @@
-Twitter EgoSearch Skype
+Twitter EgoSearch Slack
 =======================
-search on Twitter and notify with Slack.
+search on Twitter and notify with [Slack.com](https://slack.com).
 
 - https://github.com/shokai/twitter-egosearch-slack
 
@@ -21,7 +21,7 @@ Setup
 -----
 
 ### Twitter
-twitter-egosearch-skype uses [Tw](http://shokai.github.io/tw/) to use Twitter API.
+twitter-egosearch-slack uses [Tw](http://shokai.github.io/tw/) to use Twitter API.
 
     % tw --user:add
     % tw --user:list
