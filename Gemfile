@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
-gem "tw", '> 0.4'
+gem "tw", '>= 1.0.0'
+gem "args_parser"
+gem "slackbot"
 gem "mongoid"
 gem "bson_ext"
-gem "skype"
 gem "ruby-dbus"
-gem "args_parser"
 gem "event_emitter"
 gem "hugeurl"
 gem "hashie"
