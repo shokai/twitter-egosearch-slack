@@ -27,7 +27,7 @@ end
 
 crawler.on :new do |word, tweet|
   puts "[new:#{word}] - #{tweet}"
-  EgoSearch::Slack.send ":beer: [#{word}] @#{tweet.user} :beer:\n#{tweet.text}\n#{tweet.time}\n#{tweet.url}"
+  EgoSearch::Slack.send ":beer: [#{word}] @#{tweet.user} :beer:\n#{tweet.url}"
 end
 
 crawler.on :error do |err|
