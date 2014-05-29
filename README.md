@@ -1,15 +1,13 @@
 Twitter EgoSearch Skype
 =======================
-search on Twitter and notify with Skype.
+search on Twitter and notify with Slack.
 
-- https://github.com/shokai/twitter-egosearch-skype
+- https://github.com/shokai/twitter-egosearch-slack
 
 Requirements
 ------------
 - Ruby 1.9.3~2.0.0
 - MongoDB 2.0
-- Skype
-- Mac OSX or Linux
 
 
 Install Dependencies
@@ -28,10 +26,11 @@ twitter-egosearch-skype uses [Tw](http://shokai.github.io/tw/) to use Twitter AP
     % tw --user:add
     % tw --user:list
 
-### Skype
-get ID of Chat.
 
-    % bundle exec ruby bin/show_chat_list.rb
+### Slack
+add slackbot integration and get token
+
+- https://YOUR-TEAM.slack.com/services/new/slackbot
 
 
 ### config.yml
@@ -42,4 +41,5 @@ get ID of Chat.
 Run
 ---
 
+    % MONGOID_ENV=development bundle exec ruby bin/egosearch.rb
     % MONGOID_ENV=production bundle exec ruby bin/egosearch.rb
