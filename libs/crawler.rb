@@ -22,8 +22,8 @@ module EgoSearch
               next
             end
           end
-          next if Config.ignore.users.find{|u| tweet.user =~ /#{u}/ }
-          next if Config.ignore.words.find{|w| tweet.text =~ /#{w}/ }
+          next if Config.ignore.users.find{|u| tweet.user =~ /#{u}/i }
+          next if Config.ignore.words.find{|w| tweet.text =~ /#{w}/i }
           emit :new, word, tweet
         end
       end
